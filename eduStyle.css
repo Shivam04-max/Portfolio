@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(1, 1, 71);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header */
+
+.Back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+.Back a {
+    text-decoration: none;
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 8px;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+.backBtn img {
+    width: 28px;
+    height: 28px;
+}
+
+.backBtn h2 {
+    color: black;
+    font-size: 1.2rem;
+    margin-left: 8px;
+}
+
+.backBtn:hover {
+    background: aqua;
+}
+
+.h1 {
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+/* Education Section */
+
+.educ,
+.proj {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.school {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    margin: 20px 0 10px;
+}
+
+.pre {
+    margin-left: 25px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.8;
+}
+
+.sem {
+    margin-left: 30px;
+    margin-top: 8px;
+}
+
+/* Footer */
+
+footer {
+    background: rgba(0, 0, 97, 0.6);
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    color: rgb(160, 160, 255);
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.Social-media {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.social:hover {
+    background: #081b31;
+}
+
+#insta {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}
+
+/* =====================
+   Tablet
+===================== */
+
+@media (max-width: 768px) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Back {
+        flex-direction: column;
+    }
+
+    .educ {
+        flex: 1;
+    }
+
+    .pre {
+        margin-left: 20px;
+    }
+
+    .sem {
+        margin-left: 20px;
+    }
+
+    .school {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        margin-top: auto;
+    }
+}
+
+/* =====================
+   Mobile
+===================== */
+
+@media (max-width: 480px) {
+
+    .Back {
+        padding: 15px;
+    }
+
+    .backBtn {
+        padding: 6px 12px;
+    }
+
+    .backBtn img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .backBtn h2 {
+        font-size: 1rem;
+    }
+
+    .h1 {
+        font-size: 1.7rem;
+    }
+
+    .educ {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .school {
+        font-size: 1.3rem;
+    }
+
+    .pre {
+        margin-left: 15px;
+        font-size: 0.95rem;
+    }
+
+    .sem {
+        margin-left: 15px;
+    }
+
+    .social {
+        width: 45px;
+        height: 45px;
+    }
+
+    #insta {
+        width: 35px;
+        height: 35px;
+    }
+
+    footer p {
+        font-size: 0.85rem;
+    }
+}
