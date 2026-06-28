@@ -18,44 +18,36 @@ body {
 }
 
 .Header {
-    height: 100vh;
     width: 100%;
-    padding: 1rem;
-    gap: 1rem;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 #Header {
-    height: 500px;
     width: 100%;
+    min-height: 90vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 .nav {
     background-color: rgb(0, 0, 116);
-    height: 10%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
     align-items: center;
-    padding: 10px;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 15px;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
-a {
+.nav a {
+    margin: 0;
     color: white;
-    text-decoration: none;
-    text-align: center;
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
-    margin-left: 0;
-    transition: 0.3s;
-    align-items: center;
-    align-content: center;
 }
 
 a:hover {
@@ -64,15 +56,17 @@ a:hover {
 }
 
 .box-1 {
-    width: 800px;
-    height: 450px;
-    align-content: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .socials-container {
     display: flex;
-    gap: 20px;
-    margin-top: 100px;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
     margin-left: 20px;
 }
 
@@ -136,21 +130,17 @@ a:hover {
 }
 
 .box-2 {
-    background-color: rgb(6, 6, 79);
-    width: 450px;
-    height: 450px;
+    background: none;
+    flex: 1;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    align-content: center;
-    border-radius: 50%;
 }
 
 .logo {
-    width: 435px;
-    height: 435px;
-    align-items: center;
-    display: inline;
-    margin-left: 17px;
-    margin-bottom: 10px;
+    width: min(450px, 80vw);
+    height: min(450px, 80vw);
+    object-fit: cover;
     border-radius: 50%;
 }
 
@@ -221,11 +211,9 @@ p {
 }
 
 .Qualification {
-    background-color: white;
+    background: white;
     color: black;
-    min-height: 100vh;
-    padding: 60px 20px;
-    text-align: center;
+    padding: 80px 20px;
 }
 
 .Quallification h1 {
@@ -235,10 +223,18 @@ p {
 
 .Education {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 60px;
-    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.edu,
+.exp,
+.pro {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
 }
 
 .edu {
@@ -290,7 +286,7 @@ p {
 }
 
 .Contact {
-    min-height: 95vh;
+    min-height: 90vh;
     text-align: center;
     padding-top: 1rem;
 }
@@ -306,26 +302,20 @@ p {
 }
 
 .form {
-    margin-left: 20px;
-    font-size: 50px;
     display: flex;
     justify-content: center;
+    padding: 20px;
+    text-align: left;
 }
 
 form {
     width: 100%;
     max-width: 600px;
-    text-align: left;
-    margin-top: -30px;
 }
 
 input {
     width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    margin-top: 8px;
+    height: 20%;
 }
 
 label {
@@ -353,15 +343,8 @@ button:hover {
 }
 
 textarea {
-    min-height: 120px;
-    resize: vertical;
     width: 100%;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    text-align: left;
-    padding: 12px;
-    margin-top: 8px;
+    height: 40%;
 }
 
 .msg-container {
@@ -377,10 +360,6 @@ textarea {
     transition: transform 0.4s, top 0.4s;
 
 }
-
-/* .hide {
-    display: none;
-} */
 
 .check {
     height: 90px;
@@ -461,447 +440,44 @@ footer p {
     background-color: #f4f4f6;
 }
 
-/* Education,project Page  */
-.h1 {
-    font-size: 2rem;
-    text-align: center;
-}
+/* Tablet */
 
-.educ {
-    height: 85vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Times New Roman', Times, serif;
-    margin-left: 20px;
-}
-
-.proj {
-    height: 70vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Times New Roman', Times, serif;
-    margin-left: 20px;
-}
-
-.school {
-    font-size: 2rem;
-    margin-left: 10px;
-}
-
-.pre {
-    margin-left: 50px;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-}
-
-.sem {
-    margin-left: 100px;
-}
-
-/* Tablets */
-
-@media screen and (max-width: 992px) {
-
-    .Header {
-        height: 100vh;
-        width: 100%;
-        padding: 1rem;
-        gap: 1rem;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-    }
+@media (max-width:992px) {
 
     #Header {
-        height: 500px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .box-1 {
-        width: 800px;
-        height: 450px;
-        align-content: center;
-    }
-
-    .socials-container {
-        display: flex;
-        gap: 20px;
-        margin-top: 100px;
-        margin-left: 20px;
-    }
-
-    .socials-container a {
-        background-color: white;
-        padding: 1em;
-        border-radius: 50%;
-        height: 64px;
-        width: 64px;
-        box-sizing: border-box;
-        flex-shrink: 0;
-        display: grid;
-        place-items: center;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .socials-container a svg {
-        height: 32px;
-    }
-
-    .socials-container a::before {
-        content: attr(data-social);
-        position: absolute;
-        background-color: var(--accent-color);
-        color: white;
-        text-decoration: none;
-        padding: 0.5em 1em;
-        border-radius: 100px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-        transform: translateY(-30px) rotate(25deg);
-        opacity: 0;
-        transition: 200ms cubic-bezier(.42, 0, .44, 1.68);
-    }
-
-    .socials-container a:hover {
-        background-color: var(--accent-color);
-        fill: white;
-    }
-
-    .socials-container a::after {
-        content: '';
-        position: absolute;
-        height: 0;
-        width: 0;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-top: 10px solid var(--accent-color);
-        transform: translateY(0) rotate(25deg);
-        opacity: 0;
-        transition: 200ms cubic-bezier(.42, 0, .44, 1.68);
-    }
-
-    .socials-container a:hover::before {
-        transform: translateY(-65px) rotate(0);
-        opacity: 1;
-    }
-
-    .socials-container a:hover::after {
-        transform: translateY(-42px) rotate(0);
-        opacity: 1;
-    }
-
-    .box-2 {
-        width: 350px;
-        height: 350px;
-        align-items: center;
-        align-content: center;
-        border-radius: 50%;
-    }
-
-    p {
-        margin-top: 10px;
-        margin-left: 20px;
-        font-size: clamp(1rem, 2vw, 1.8rem);
-    }
-
-    .H {
-        color: rgb(0, 213, 255);
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 2px solid rgb(0, 213, 255);
-        width: 0;
-
-
-        animation:
-            typing 2.5s steps(18, end) forwards,
-            blink-cursor 0.75s step-end infinite;
-        animation-delay: 0.8s;
-    }
-
-    .S {
-        margin-top: -15px;
-        font-size: 2.5rem;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 2px solid #ffffff;
-        width: 0;
-
-
-        animation:
-            typing 3.5s steps(15, end) forwards,
-            blink-cursor 0.75s step-end infinite;
-        animation-delay: 1s;
-    }
-
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 16ch;
-        }
-    }
-
-    @keyframes blink-cursor {
-
-        from,
-        to {
-            border-color: transparent;
-        }
-
-        50% {
-            border-color: #000;
-        }
-    }
-
-    .logo {
-        width: 335px;
-        height: 335px;
-        align-items: center;
-        display: inline;
-        margin-left: 17px;
-        margin-bottom: 10px;
-        border-radius: 50%;
-    }
-
-    /* Education,project Page  */
-    .h1 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .educ {
-        height: 85vh;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        font-family: 'Times New Roman', Times, serif;
-        padding: 2rem;
-        padding-left: 5rem;
-        margin-left: 0px;
-    }
-
-    .proj {
-        height: 90vh;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        font-family: 'Times New Roman', Times, serif;
-        padding: 2rem;
-        padding-left: 5rem;
-        margin-left: 0px;
-    }
-
-    .school {
-        font-size: 1.5rem;
-        margin-left: 10px;
-    }
-
-    .pre {
-        margin-left: 50px;
-        margin-top: 1rem;
-        font-size: 1rem;
-    }
-
-    .sem {
-        margin-left: 100px;
-    }
-}
-
-/* Mobile */
-@media screen and (max-width: 768px) {
-
-    .Header {
-        height: 100vh;
-        width: 100%;
-        padding: 1rem;
-        align-items: center;
-        align-content: center;
-    }
-
-    #Header {
-        height: 100vh;
-        width: 100%;
-        display: flex;
         flex-direction: column-reverse;
+        text-align: center;
         justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
     }
 
     .box-1 {
-        width: 100%;
-        height: 300px;
-        text-align: center;
-        align-content: center;
         align-items: center;
     }
 
-    .socials-container {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 20px;
+    h1,
+    p {
         margin-left: 0;
     }
 
-    .socials-container a {
-        background-color: white;
-        padding: 1em;
-        border-radius: 50%;
-        height: 50px;
-        width: 50px;
-        box-sizing: border-box;
-        flex-shrink: 0;
-        display: grid;
-        place-items: center;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .socials-container a svg {
-        height: 32px;
-    }
-
-    .socials-container a::before {
-        content: attr(data-social);
-        position: absolute;
-        background-color: var(--accent-color);
-        color: white;
-        text-decoration: none;
-        padding: 0.5em 1em;
-        border-radius: 100px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-        transform: translateY(-30px) rotate(25deg);
-        opacity: 0;
-        transition: 200ms cubic-bezier(.42, 0, .44, 1.68);
-    }
-
-    .socials-container a:hover {
-        background-color: var(--accent-color);
-        fill: white;
-    }
-
-    .socials-container a::after {
-        content: '';
-        position: absolute;
-        height: 0;
-        width: 0;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-top: 10px solid var(--accent-color);
-        transform: translateY(0) rotate(25deg);
-        opacity: 0;
-        transition: 200ms cubic-bezier(.42, 0, .44, 1.68);
-    }
-
-    .socials-container a:hover::before {
-        transform: translateY(-65px) rotate(0);
-        opacity: 1;
-    }
-
-    .socials-container a:hover::after {
-        transform: translateY(-42px) rotate(0);
-        opacity: 1;
-    }
-
-    .box-2 {
-        width: 300px;
-        height: 300px;
-        align-items: center;
-        align-content: center;
-        border-radius: 50%;
-    }
-
-    .H {
-        font-size: 3rem;
-        text-align: center;
-        margin: 0;
-        margin-left: 150px;
-        color: rgb(0, 213, 255);
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid rgb(0, 213, 255);
-        width: 0;
-
-
-        animation:
-            typing1 2s steps(5, end) forwards,
-            blink-cursor 0.75s step-end infinite;
-        animation-delay: 0.8s;
-    }
-
-    .S {
-        font-size: 3rem;
-        margin-top: -10px;
-        margin-left: 10px;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid #ffffff;
-        width: 0;
-
-
-        animation:
-            typing 3s steps(16, end) forwards,
-            blink-cursor 0.75s step-end infinite;
-        animation-delay: 1s;
-    }
-
-    @keyframes typing1 {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 6ch;
-        }
-    }
-
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 16ch;
-        }
-    }
-
-    @keyframes blink-cursor {
-
-        from,
-        to {
-            border-color: transparent;
-        }
-
-        50% {
-            border-color: #000;
-        }
+    .socials-container {
+        justify-content: center;
+        margin-left: 0;
     }
 
     .logo {
-        width: 285px;
-        height: 285px;
-        align-items: center;
-        display: inline;
-        margin-left: 17px;
-        margin-bottom: 10px;
-        border-radius: 50%;
+        width: 350px;
+        height: 350px;
     }
 
-    .Education {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 10px;
-        gap: 3rem;
+}
+
+/* Mobile */
+
+@media (max-width:768px) {
+
+    .logo {
+        width: 280px;
+        height: 280px;
     }
 
     .edu,
@@ -911,466 +487,52 @@ footer p {
         height: 220px;
     }
 
-    .form {
-        font-size: 50px;
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;
-    }
-
-    form {
-        width: 100%;
-        max-width: 400px;
-        text-align: left;
-    }
-
-    input {
-        width: 100%;
-        padding: 12px;
-        font-size: 1rem;
-        border: none;
-        border-radius: 8px;
-        margin-top: 8px;
-    }
-
-    label {
-        font-size: 1rem;
-    }
-
     button {
-        margin-top: 15px;
-        width: 150px;
-        height: 50px;
-        border: none;
-        border-radius: 8px;
-        background: rgb(0, 213, 255);
-        color: black;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1rem;
-        font-weight: bold;
-        margin-bottom: 15px;
-        cursor: pointer;
-    }
-
-    /* Education,project Page  */
-    .h1 {
-        font-size: 1.8rem;
-        text-align: center;
-
-    }
-
-    .educ {
-        height: 90vh;
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        font-family: 'Times New Roman', Times, serif;
-        margin-left: 0px;
     }
 
-    /* project */
-    .proj {
-        height: 90vh;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        font-family: 'Times New Roman', Times, serif;
-        padding: 2rem;
-        padding-left: 5rem;
-        margin-left: 0px;
+    .nav {
+        gap: 12px;
     }
 
-    .school {
-        font-size: 1.25rem;
-        margin-left: 10px;
+    .socials-container a {
+        width: 55px;
+        height: 55px;
     }
 
-    .pre {
-        margin-left: 50px;
-        margin-top: 1rem;
-        font-size: 1rem;
+    .socials-container a svg {
+        width: 26px;
+        height: 26px;
     }
 
-    .sem {
-        margin-left: 100px;
-    }
 }
 
 /* Small Phones */
 
-@media (max-width: 480px) {
-
-    .Header {
-        height: 100vh;
-        width: 100%;
-        padding: 1rem;
-        align-items: center;
-        align-content: center;
-    }
-
-    #Header {
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .box-1 {
-        width: 100%;
-        height: 300px;
-        text-align: center;
-        align-content: center;
-    }
-
-    .socials-container {
-        display: flex;
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .socials-container a {
-        background-color: white;
-        padding: 1em;
-        border-radius: 50%;
-        height: 50px;
-        width: 50px;
-        box-sizing: border-box;
-        flex-shrink: 0;
-        display: grid;
-        place-items: center;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .socials-container a svg {
-        height: 32px;
-    }
-
-    .socials-container a::before {
-        content: attr(data-social);
-        position: absolute;
-        background-color: var(--accent-color);
-        color: white;
-        text-decoration: none;
-        padding: 0.5em 1em;
-        border-radius: 100px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-        transform: translateY(-30px) rotate(25deg);
-        opacity: 0;
-        transition: 200ms cubic-bezier(.42, 0, .44, 1.68);
-    }
-
-    .socials-container a:hover {
-        background-color: var(--accent-color);
-        fill: white;
-    }
-
-    .socials-container a::after {
-        content: '';
-        position: absolute;
-        height: 0;
-        width: 0;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-top: 10px solid var(--accent-color);
-        transform: translateY(0) rotate(25deg);
-        opacity: 0;
-        transition: 200ms cubic-bezier(.42, 0, .44, 1.68);
-    }
-
-    .socials-container a:hover::before {
-        transform: translateY(-65px) rotate(0);
-        opacity: 1;
-    }
-
-    .socials-container a:hover::after {
-        transform: translateY(-42px) rotate(0);
-        opacity: 1;
-    }
-
-    .box-2 {
-        width: 300px;
-        height: 300px;
-        align-items: center;
-        align-content: center;
-        border-radius: 50%;
-    }
-
-    .H {
-        font-size: 2rem;
-        margin: 0;
-        margin-left: 100px;
-        color: rgb(0, 213, 255);
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid rgb(0, 213, 255);
-        width: 0;
-
-
-        animation:
-            typing1 2s steps(6, end) forwards,
-            blink-cursor 0.75s step-end infinite;
-        animation-delay: 0.8s;
-    }
-
-    .S {
-        margin: 0;
-        margin-top: -10px;
-        font-size: 2rem;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid #ffffff;
-        width: 0;
-
-
-        animation:
-            typing 3.5s steps(16, end) forwards,
-            blink-cursor 0.75s step-end infinite;
-        animation-delay: 1s;
-    }
-
-    @keyframes typing1 {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 6ch;
-        }
-    }
-
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 16ch;
-        }
-    }
-
-    @keyframes blink-cursor {
-
-        from,
-        to {
-            border-color: transparent;
-        }
-
-        50% {
-            border-color: #000;
-        }
-    }
+@media (max-width:480px) {
 
     .logo {
-        width: 285px;
-        height: 285px;
-        align-items: center;
-        display: inline;
-        margin-left: 17px;
-        margin-bottom: 10px;
-        border-radius: 50%;
-    }
-
-    .Education {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 10px;
-        gap: 3rem;
+        width: 220px;
+        height: 220px;
     }
 
     .edu,
     .exp,
     .pro {
-        width: 220px;
-        height: 220px;
+        width: 180px;
+        height: 180px;
     }
 
-    .form {
-        font-size: 50px;
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;
+    h1 {
+        font-size: 2rem;
     }
 
-    form {
-        width: 100%;
-        max-width: 290px;
-        text-align: left;
-    }
-
-    input {
-        width: 100%;
-        padding: 12px;
+    p {
         font-size: 1rem;
-        border: none;
-        border-radius: 8px;
-        margin-top: 8px;
     }
 
-    button {
-        margin-top: 15px;
-        width: 100px;
-        height: 50px;
-        border: none;
-        border-radius: 8px;
-        background: rgb(0, 213, 255);
-        color: black;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1rem;
-        font-weight: bold;
-        margin-bottom: 15px;
-        cursor: pointer;
+    .nav a {
+        font-size: 14px;
     }
 
-    .msg-container {
-        width: 300px;
-        position: absolute;
-        background-color: rgb(0, 166, 255);
-        text-align: center;
-        border-radius: 6px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(1);
-        padding: 0 30px 30px;
-        transition: transform 0.4s, top 0.4s;
-
-    }
-
-    /* .hide {
-    display: none;
-} */
-
-    .check {
-        height: 90px;
-        width: 90px;
-        border-radius: 50%;
-        margin-top: -50px;
-        box-shadow: 0 2px 5px rgba(1, 1, 1, 0.2);
-    }
-
-    .Tnk {
-        margin: 10px 0 5px;
-        font-weight: 500;
-        font-size: 2.5rem;
-    }
-
-    .res {
-        font-size: 1.25rem;
-        font-family: 'Times New Roman', Times, serif;
-        font-weight: lighter;
-    }
-
-    .msg-container button {
-        width: 100%;
-        font-size: 1.5rem;
-        background-color: rgb(21, 252, 0);
-        color: #000;
-        margin-top: 20px;
-        border: 0;
-        outline: none;
-        box-shadow: 0 5px 5px rgba(1, 1, 1, 0.2);
-    }
-
-    .msg-container button:hover {
-        background-color: blue;
-        color: white;
-    }
-
-    /* Education Page  */
-    .h1 {
-        margin-left: 0px;
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    .educ {
-        height: 80vh;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        font-family: 'Times New Roman', Times, serif;
-        padding: 2rem;
-        margin-left: 0px;
-    }
-
-    .proj {
-        height: 80vh;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        font-family: 'Times New Roman', Times, serif;
-        padding: 2rem;
-
-        margin-left: 0px;
-    }
-
-    .school {
-        font-size: 1.45rem;
-        margin-left: 5px;
-    }
-
-    .pre {
-        margin-left: 15px;
-        margin-top: 1rem;
-        font-size: 0.9rem;
-    }
-
-    .sem {
-        margin-left: 60px;
-    }
 }
-
-/* Large Desktops */
-
-/* @media (min-width: 1400px) {
-
-    .Header {
-        max-width: 1400px;
-        margin: auto;
-    }
-
-    .Collification,
-    .Contact {
-        padding-left: 100px;
-        padding-right: 100px;
-    }*/
-
-/* Education Page  */
-/* .h1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .educ {
-        height: 85vh;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        font-size: 1rem;
-        font-family: 'Times New Roman', Times, serif;
-        padding: 2rem;
-    }
-
-    .school {
-        font-size: 2rem;
-        margin-left: 10px;
-    }
-
-    .pre {
-        margin-left: 50px;
-        margin-top: 1rem;
-        font-size: 1.2rem;
-    }
-
-    .sem {
-        margin-left: 100px;
-    }
-} */
